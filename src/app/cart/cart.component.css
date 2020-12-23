@@ -1,0 +1,8 @@
+.animation{
+      background: rgb(21, 149, 231);
+      color: cornsilk;
+      border: 2px;
+      cursor: pointer;
+      display: flex;
+      padding: 10px 20px;
+  }

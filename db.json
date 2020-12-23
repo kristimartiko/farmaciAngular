@@ -1,0 +1,73 @@
+{
+  "products": [
+    {
+      "name": "Ranital",
+      "price": "14.99",
+      "imgPath": "https://img-new.cgtrader.com/items/771790/6b0a1548cb/medicine-pills-package-3d-model-rigged-obj-mtl-3ds-fbx-blend-dae.png",
+      "id": 1
+    },
+    {
+      "name": "Codiovan",
+      "price": "9.60",
+      "imgPath": "https://static.wixstatic.com/media/04f121_1ade7959184d417c9fa6572f1c6b2607~mv2.png/v1/fill/w_576,h_576,al_c,lg_1/04f121_1ade7959184d417c9fa6572f1c6b2607~mv2.png",
+      "id": 2
+    },
+    {
+      "name": "Ibuprofen",
+      "price": "4.99",
+      "imgPath": "https://i.guim.co.uk/img/static/sys-images/Environment/Pix/columnists/2011/3/2/1299084373266/Various-005.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctYWdlLTIwMTEucG5n&enable=upscale&s=92b9617d17454cd687a0214bb1eee7a3",
+      "id": 3
+    },
+    {
+      "name": "Oki",
+      "price": "1.05",
+      "imgPath": "https://www.farmacosmo.com/135152-medium_default/okitask-40-mg-30-orosoluble-sachets-074576.jpg",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Kristi",
+      "lastName": "Martiko",
+      "email": "kristimartiko.km@gmail.com",
+      "password": "kristi12",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "firstName": "Olta",
+      "lastName": "Martiko",
+      "email": "oltamartiko@yahoo.com",
+      "password": "oltaolta",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "firstName": "Jorgo",
+      "lastName": "Mehilli",
+      "email": "jorgomehilli@gmail.com",
+      "password": "jorgo12",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "firstName": "Ledio",
+      "lastName": "Koci",
+      "email": "lediokoci@gmail.com",
+      "password": "ledio12",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "name": "Ranital",
+      "price": "14.99",
+      "imgPath": "https://img-new.cgtrader.com/items/771790/6b0a1548cb/medicine-pills-package-3d-model-rigged-obj-mtl-3ds-fbx-blend-dae.png",
+      "p_id": 1,
+      "quantity": 1,
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
