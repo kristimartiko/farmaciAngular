@@ -16,18 +16,18 @@ export class ProductsService {
     constructor(private http: HttpClient) {}
 
     recieveData() {
-        return this.http.get<Product[]>(" http://localhost:3000/products");
+        return this.http.get<Product[]>(" http://localhost:8787/products");
     }
 
     addNewProduct(formValue: any): Observable<Product> {
-        return this.http.post<Product>('http://localhost:3000/products', formValue);
+        return this.http.post<Product>('http://localhost:8787/products/add', formValue);
     }
 
     deleteProduct(p: Product) {
-        return this.http.delete(`http://localhost:3000/products/${p.id}`);
+        return this.http.delete("http://localhost:8787/products/delete{id}");
     }
 
     updateProduct(p: Product) {
-        return this.http.put<Product>('http://localhost:3000/products/update${p.id}', p);
+        return this.http.put<Product>("http://localhost:8787/products/update{id}", p);
     }
 }
