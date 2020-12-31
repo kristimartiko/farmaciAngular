@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { CartService } from 'src/app/cart/cart.service';
 import { MatSnackBar } from '@angular/material';
-import { map } from 'rxjs/operators';
+import { first, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  /*onSubmit() {
    this.authService.recieveUser().subscribe((userResponse) => {
       userResponse = userResponse.filter(user => 
         user.password === this.logInForm.value.password && 
@@ -51,6 +51,26 @@ export class LoginComponent implements OnInit {
         }
       }
    })
+  }*/
+
+  onSubmit() {
+    this.authService.login(this.logInForm.value).subscribe(response => {
+      let token = JSON.parse(JSON.stringify(response));
+      console.log(response);
+      localStorage.setItem('token', token.jwt);
+      localStorage.setItem('name', token.firstName);
+      if(this.authService.getAdmin()) {
+        this.router.navigate(['/home']);
+        this.snackBar.open('Successfully logged in as admin', '', {
+          duration: 3000
+        });
+      } else {
+        this.router.navigate(['/home']);
+        this.snackBar.open('Successfully logged in as user', '', {
+          duration: 3000
+        });
+      }
+    });
   }
 
   filterUser() {

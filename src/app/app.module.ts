@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,7 @@ import { ProductdialogComponent } from './admin/productmanagment/productdialog/p
 import { FilterPipe } from './admin/filter.pipe';
 import {MatSnackBarModule, MatFormFieldModule, MatSelectModule, MatCheckboxModule, MatInputModule,  MatDialogModule} from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
+import { TokenInterceptorService} from './token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,10 @@ import { FooterComponent } from './footer/footer.component';
     MatSnackBarModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [ {provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

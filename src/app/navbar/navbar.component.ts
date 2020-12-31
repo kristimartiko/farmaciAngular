@@ -34,18 +34,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.authService.logout();
   }
 
-    getUsername() {
+   // getUsername() {
     // return this.username = this.authService.getUserName();
     //  this.authService.getUserName();
-  }
+  //}
 
   isAdmin1(): boolean {
-    this.admin = this.authService.getRole();
-    if(this.admin === "admin") {
-      return true
+    if(this.authService.getAdmin()) {
+      return true;
     } else {
       return false;
     }
   }
-
 }

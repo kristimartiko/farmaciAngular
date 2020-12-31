@@ -24,10 +24,10 @@ export class ProductsService {
     }
 
     deleteProduct(p: Product) {
-        return this.http.delete("http://localhost:8787/products/delete{id}");
+        return this.http.delete(`http://localhost:8787/products/delete${p.id}`);
     }
 
     updateProduct(p: Product) {
-        return this.http.put<Product>("http://localhost:8787/products/update{id}", p);
+        return this.http.put<Product>(`http://localhost:8787/products/update${p.id}`, p);
     }
 }

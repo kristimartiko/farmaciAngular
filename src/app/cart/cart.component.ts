@@ -31,6 +31,9 @@ export class CartComponent implements OnInit {
   deleteItem(index: number) {
     this.cartService.deleteItemFromCart(this.products[index].id).subscribe(() => {
       this.products.splice(index, 1);
+      this.snackBar.open('Successfully removed item from cart!', '', {
+        duration: 3000
+      })
     }, error => {
       console.log(error);
     });
