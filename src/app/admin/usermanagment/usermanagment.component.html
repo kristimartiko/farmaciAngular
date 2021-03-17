@@ -21,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let user of users; let i = index">
+                <tr *ngFor="let user of users | filter: searchText; let i = index">
                     <td style="font-weight: bold;">{{ i + 1 }}</td>
                     <td>{{ user.firstName }}</td>
                     <td>{{ user.lastName }}</td>

@@ -45,7 +45,7 @@ export class UserdialogComponent implements OnInit {
     if(!this.userForm.valid){
       console.log("fail");
     }
-      this.authService.signUp(this.userForm.value).subscribe((data) => {
+      this.authService.addUser(this.userForm.value).subscribe((data) => {
         this.matDialogRef.close(true);
         this.snackBar.open('User updated successfully', '', {duration: 3000});
       }, error => {

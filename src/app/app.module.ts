@@ -22,7 +22,7 @@ import { UsermanagmentComponent } from './admin/usermanagment/usermanagment.comp
 import { UserdialogComponent } from './admin/usermanagment/userdialog/userdialog.component';
 import { ProductmanagmentComponent } from './admin/productmanagment/productmanagment.component';
 import { ProductdialogComponent } from './admin/productmanagment/productdialog/productdialog.component';
-import { FilterPipe } from './admin/filter.pipe';
+import { FilterPipe } from './admin/usermanagment/filter.pipe';
 import {MatSnackBarModule, MatFormFieldModule, MatSelectModule, MatCheckboxModule, MatInputModule,  MatDialogModule} from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import { TokenInterceptorService} from './token-interceptor.service';

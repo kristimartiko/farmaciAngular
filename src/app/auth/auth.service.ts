@@ -27,6 +27,10 @@ export class AuthService {
     recieveUser(): Observable<User[]> {
         return this.http.get<User[]>("http://localhost:8787/users");
       }
+
+      addUser(formvalue: any) {
+        return this.http.post("http://localhost:8787/users/add", formvalue);
+      }
     
     signUp(formValue: any) {
       return this.http.post("http://localhost:8787/users/signup", formValue);
